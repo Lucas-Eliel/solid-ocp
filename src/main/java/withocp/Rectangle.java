@@ -1,6 +1,6 @@
 package withocp;
 
-public class Rectangle {
+public class Rectangle implements Area {
 
     private double width;
     private double height;
@@ -10,11 +10,8 @@ public class Rectangle {
         this.height = height;
     }
 
-    public double getWidth() {
-        return width;
-    }
-
-    public double getHeight() {
-        return height;
+    @Override
+    public double calculateArea() {
+        return this.height * this.width;
     }
 }

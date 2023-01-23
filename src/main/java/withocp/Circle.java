@@ -1,6 +1,6 @@
 package withocp;
 
-public class Circle {
+public class Circle implements Area {
 
     private double radius;
 
@@ -8,7 +8,8 @@ public class Circle {
         this.radius = radius;
     }
 
-    public double getRadius() {
-        return radius;
+    @Override
+    public double calculateArea() {
+        return this.radius * this.radius * Math.PI;
     }
 }
